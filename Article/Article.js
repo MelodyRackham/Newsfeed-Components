@@ -113,23 +113,23 @@ const articleData = [
 
 */
 
-const article = document.querySelector('.article');
+const articles = document.querySelector('.articles');
 
-// articleData.forEach(data => {
-//   console.log('creating article!', data.title);
-//   article.appendChild(
-//     createArticle(
-//       data.title,
-//       data.date,
-//       data.firstParagraph,
-//       data.secondParagraph,
-//       data.thirdParagraph,
-//       data.expandButton,
-//     ),
-//   );
-// });
+articleData.forEach(data => {
+  console.log('creating article!', data.title);
+  articles.appendChild(
+    createArticle(
+      data.title,
+      data.date,
+      data.firstParagraph,
+      data.secondParagraph,
+      data.thirdParagraph,
+      data.expandButton,
+    ),
+  );
+});
 
-function articleCreator(title, date, firstParagraph, secondParagraph, thirdParagraph, expandButton) {
+function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph, expandButton) {
   // define new elements
   const article = document.createElement('div');
   const articleTitle = document.createElement('h2');
